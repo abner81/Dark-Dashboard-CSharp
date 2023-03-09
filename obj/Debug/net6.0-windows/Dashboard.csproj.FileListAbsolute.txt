@@ -19,3 +19,5 @@
 \\Mac\Home\Documents\Estudo Dev\Dashboard\Dashboard\bin\Debug\net6.0-windows\CircularProgressBar.dll
 \\Mac\Home\Documents\Estudo Dev\Dashboard\Dashboard\bin\Debug\net6.0-windows\WinFormAnimation.dll
 \\Mac\Home\Documents\Estudo Dev\Dashboard\Dashboard\obj\Debug\net6.0-windows\Dashboard.csproj.CopyComplete
+\\Mac\Home\Documents\Estudo Dev\Dashboard\Dashboard\obj\Debug\net6.0-windows\Dashboard.View.FormDashboard.resources
+\\Mac\Home\Documents\Estudo Dev\Dashboard\Dashboard\obj\Debug\net6.0-windows\ButtonEvents.resources

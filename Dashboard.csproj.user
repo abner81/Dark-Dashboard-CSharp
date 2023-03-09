@@ -4,5 +4,8 @@
     <Compile Update="View\DashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

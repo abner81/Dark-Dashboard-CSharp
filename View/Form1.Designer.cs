@@ -1,8 +1,6 @@
-﻿using System.Resources;
-
-namespace Dashboard.View
+﻿namespace Dashboard.View
 {
-    partial class DashboardForm
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +28,10 @@ namespace Dashboard.View
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            pnlNav = new Panel();
             panel1 = new Panel();
             btnSettings = new Button();
+            label1 = new Label();
             btnContactUs = new Button();
             btnCalendar = new Button();
             btnAnalytics = new Button();
@@ -40,27 +39,29 @@ namespace Dashboard.View
             panel2 = new Panel();
             label2 = new Label();
             pictureBox1 = new PictureBox();
-            pnlNav = new Panel();
-            label3 = new Label();
+            btnClose = new Button();
             textBox1 = new TextBox();
-            button1 = new Button();
+            lblTitle = new Label();
+            pnlFormLoader = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // pnlNav
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(196, 261);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 15);
-            label1.TabIndex = 0;
+            pnlNav.BackColor = Color.FromArgb(0, 126, 249);
+            pnlNav.Location = new Point(0, 189);
+            pnlNav.Name = "pnlNav";
+            pnlNav.Size = new Size(3, 100);
+            pnlNav.TabIndex = 5;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(24, 30, 54);
+            panel1.Controls.Add(pnlNav);
             panel1.Controls.Add(btnSettings);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(btnContactUs);
             panel1.Controls.Add(btnCalendar);
             panel1.Controls.Add(btnAnalytics);
@@ -69,8 +70,8 @@ namespace Dashboard.View
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(186, 800);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(186, 577);
+            panel1.TabIndex = 4;
             // 
             // btnSettings
             // 
@@ -79,14 +80,23 @@ namespace Dashboard.View
             btnSettings.FlatAppearance.BorderSize = 0;
             btnSettings.FlatStyle = FlatStyle.Flat;
             btnSettings.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSettings.ForeColor = Color.FromArgb(0, 126, 249);
             btnSettings.Image = Properties.Resources.settings;
-            btnSettings.Location = new Point(0, 755);
+            btnSettings.Location = new Point(0, 532);
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(186, 45);
             btnSettings.TabIndex = 8;
             btnSettings.Text = "Configurações";
             btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSettings.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(196, 257);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 3;
             // 
             // btnContactUs
             // 
@@ -95,6 +105,7 @@ namespace Dashboard.View
             btnContactUs.FlatAppearance.BorderSize = 0;
             btnContactUs.FlatStyle = FlatStyle.Flat;
             btnContactUs.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnContactUs.ForeColor = Color.FromArgb(0, 126, 249);
             btnContactUs.Image = Properties.Resources.Conact;
             btnContactUs.Location = new Point(0, 279);
             btnContactUs.Name = "btnContactUs";
@@ -111,6 +122,7 @@ namespace Dashboard.View
             btnCalendar.FlatAppearance.BorderSize = 0;
             btnCalendar.FlatStyle = FlatStyle.Flat;
             btnCalendar.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCalendar.ForeColor = Color.FromArgb(0, 126, 249);
             btnCalendar.Image = Properties.Resources.home;
             btnCalendar.Location = new Point(0, 234);
             btnCalendar.Name = "btnCalendar";
@@ -127,6 +139,7 @@ namespace Dashboard.View
             btnAnalytics.FlatAppearance.BorderSize = 0;
             btnAnalytics.FlatStyle = FlatStyle.Flat;
             btnAnalytics.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAnalytics.ForeColor = Color.FromArgb(0, 126, 249);
             btnAnalytics.Image = Properties.Resources.diagram;
             btnAnalytics.Location = new Point(0, 189);
             btnAnalytics.Name = "btnAnalytics";
@@ -135,7 +148,6 @@ namespace Dashboard.View
             btnAnalytics.Text = "Analytics";
             btnAnalytics.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAnalytics.UseVisualStyleBackColor = true;
-            btnAnalytics.Click += btnAnalytics_Click;
             // 
             // btnDashboard
             // 
@@ -144,6 +156,7 @@ namespace Dashboard.View
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDashboard.ForeColor = Color.FromArgb(0, 126, 249);
             btnDashboard.Image = Properties.Resources.home;
             btnDashboard.Location = new Point(0, 144);
             btnDashboard.Name = "btnDashboard";
@@ -152,7 +165,7 @@ namespace Dashboard.View
             btnDashboard.Text = "Dashboard";
             btnDashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDashboard.UseVisualStyleBackColor = true;
-            btnDashboard.Click += btnDashboard_Click;
+        
             // 
             // panel2
             // 
@@ -185,24 +198,17 @@ namespace Dashboard.View
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // pnlNav
+            // btnClose
             // 
-            pnlNav.BackColor = Color.FromArgb(0, 126, 249);
-            pnlNav.Location = new Point(0, 193);
-            pnlNav.Name = "pnlNav";
-            pnlNav.Size = new Size(3, 100);
-            pnlNav.TabIndex = 2;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(158, 161, 176);
-            label3.Location = new Point(220, 17);
-            label3.Name = "label3";
-            label3.Size = new Size(156, 31);
-            label3.TabIndex = 3;
-            label3.Text = "Dashboard";
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(907, 23);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(25, 25);
+            btnClose.TabIndex = 24;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -210,46 +216,49 @@ namespace Dashboard.View
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.ForeColor = SystemColors.ScrollBar;
-            textBox1.Location = new Point(615, 26);
+            textBox1.Location = new Point(609, 26);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(292, 22);
-            textBox1.TabIndex = 4;
+            textBox1.TabIndex = 23;
             textBox1.Text = "Pesquisar...";
             // 
-            // button1
+            // lblTitle
             // 
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(924, 24);
-            button1.Name = "button1";
-            button1.Size = new Size(25, 25);
-            button1.TabIndex = 5;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = true;
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitle.ForeColor = Color.FromArgb(158, 161, 176);
+            lblTitle.Location = new Point(214, 17);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(156, 31);
+            lblTitle.TabIndex = 22;
+            lblTitle.Text = "Dashboard";
             // 
-            // DashboardForm
+            // pnlFormLoader
+            // 
+            pnlFormLoader.Dock = DockStyle.Bottom;
+            pnlFormLoader.Location = new Point(186, 100);
+            pnlFormLoader.Name = "pnlFormLoader";
+            pnlFormLoader.Size = new Size(765, 477);
+            pnlFormLoader.TabIndex = 25;
+            // 
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
-            ClientSize = new Size(1522, 800);
-            Controls.Add(button1);
+            ClientSize = new Size(951, 577);
+            Controls.Add(pnlFormLoader);
+            Controls.Add(btnClose);
             Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(pnlNav);
+            Controls.Add(lblTitle);
             Controls.Add(panel1);
-            Controls.Add(label1);
-            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            ForeColor = Color.FromArgb(0, 126, 249);
             FormBorderStyle = FormBorderStyle.None;
-            ImeMode = ImeMode.Off;
-            Name = "DashboardForm";
+            Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Dashboard";
-            TransparencyKey = Color.FromArgb(0, 192, 0);
+            Text = "Form1";
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -259,19 +268,20 @@ namespace Dashboard.View
 
         #endregion
 
-        private Label label1;
+        private Panel pnlNav;
         private Panel panel1;
-        private Panel panel2;
-        private Label label2;
-        private PictureBox pictureBox1;
-        private Button btnDashboard;
         private Button btnSettings;
         private Button btnContactUs;
         private Button btnCalendar;
         private Button btnAnalytics;
-        private Panel pnlNav;
-        private Label label3;
+        private Button btnDashboard;
+        private Panel panel2;
+        private Label label2;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Button btnClose;
         private TextBox textBox1;
-        private Button button1;
+        private Label lblTitle;
+        private Panel pnlFormLoader;
     }
 }

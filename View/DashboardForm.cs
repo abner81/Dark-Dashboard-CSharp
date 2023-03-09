@@ -58,8 +58,22 @@ namespace Dashboard.View
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             var buttons = new Button[] { btnAnalytics, btnCalendar, btnContactUs, btnSettings, btnDashboard };
-            PinNavOnClickIn(buttons);
-            FixBackColorOnLeaveIn(buttons);
+            
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        { 
+
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RedrawLayoutSidebar()
+        {
+
         }
     }
 }
